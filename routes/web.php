@@ -17,6 +17,10 @@ Route::get('/', function () {
     return redirect('home');
 })->name('index');
 
+Route::get('/get_ps', [App\Http\Controllers\HomeController::class, 'get_products_services']);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
+
+
