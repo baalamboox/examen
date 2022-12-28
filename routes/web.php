@@ -17,7 +17,8 @@ Route::get('/', function () {
     return redirect('home');
 })->name('index');
 
-Route::get('/get_ps', [App\Http\Controllers\HomeController::class, 'get_products_services']);
+Route::get('/get_ps', [App\Http\Controllers\HomeController::class, 'get_ps']);
+Route::post('/create_bill', [App\Http\Controllers\HomeController::class, 'create_bill']);
 
 Auth::routes();
 
